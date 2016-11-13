@@ -7,6 +7,29 @@
     <body class="">
         <script>
 
+            function createXHR(){  
+                if(window.XMLHttpRequest){  
+                    return new XMLHttpRequest();  
+                }  
+                else{  
+                    return new ActiveXObject("Microsoft.XMLHTTP");  
+                }  
+            }
+
+            function getAJAX(fn,url){  
+                var xhr = createXHR();  
+                xhr.open("GET",url,true);  
+                xhr.onreadystatechange =  function(){  
+                    if(xhr.readyState == 4){//异步请求时的状态码4代表数据接收完毕  
+                        if(xhr.status == 200){//HTTP的状态 成功  
+                            var data = eval("(" + xhr.responseText + ")");  
+                            fn(data);//实现函数的回调,将结果返回  
+                        }  
+                    }  
+                }  
+                xhr.send(null);  
+            } 
+
             // Using JS simple way to parse input params
             function GetQueryString(name)
             {
@@ -17,7 +40,13 @@
 
             function main(){
                 if (GetQueryString("test") != null) {
-                    alert(GetQueryString("test"));
+                    var url = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
+
+                    getAJAX(function(data){
+                        alert(data);
+                        if(data.result =="ok"){
+                        }
+                    },url);
                 }
             } 
 
