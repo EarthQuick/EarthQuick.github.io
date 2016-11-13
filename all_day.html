@@ -4,7 +4,7 @@
         <title>EarthQuick RESTful API</title>
         <meta charset="utf-8" />
     </head>
-    <body class="">
+    <body id="tbody">
         <script>
 
             function createXHR(){  
@@ -43,9 +43,8 @@
                     var url = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
 
                     getAJAX(function(data){
-                        alert(eval(data);
-                        if(data.result =="ok"){
-                        }
+                        var t = eval(data);
+                        document.getElementById("tbody").innerHTML = t.features.toJSONString();
                     },url);
                 }
             } 
