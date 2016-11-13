@@ -60,7 +60,7 @@
 
                     getAJAX(function(data){
                         var t = eval(data);
-                        document.getElementById("tbody").innerHTML = t.features.toJSONString();
+                        document.getElementById("tbody").innerHTML = JSON.stringify(t.features);
                     },url);
                 }
             } 
