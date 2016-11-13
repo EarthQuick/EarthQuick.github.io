@@ -21,10 +21,10 @@
                 var xhr = createXHR();  
                 xhr.open("GET",url,true);  
                 xhr.onreadystatechange =  function(){  
-                    if(xhr.readyState == 4){//异步请求时的状态码4代表数据接收完毕  
-                        if(xhr.status == 200){//HTTP的状态 成功  
+                    if(xhr.readyState == 4){ 
+                        if(xhr.status == 200){
                             var data = eval("(" + xhr.responseText + ")");  
-                            fn(data);//实现函数的回调,将结果返回  
+                            fn(data);  
                         }  
                     }  
                 }  
@@ -39,29 +39,41 @@
                  if(r!=null)return  unescape(r[2]); return null;
             }
 
-            function JsonToStr(o) {
-                var arr = [];
-                var fmt = function(s) {
-                    if (typeof s == 'object' && s != null) return JsonToStr(s);
-                    if (s == null) {
-                        return "\"\"";
-                    } else {
-                        return /^(string|number)$/.test(typeof s) ? "\"" + s + "\"" : s;
-                    }
-                }
-
-                for (var i in o) arr.push("\"" + i + "\":" + fmt(o[i]));
-                return '{' + arr.join(',') + '}';
-            }
-
             function main(){
-                if (GetQueryString("test") != null) {
-                    var url = "https://earthquick.github.io/data/1.0_hour.json";
+
+                var type = GetQueryString("time");
+                var minmag = GetQueryString("minmag");
+
+                if (type != null) {
+                    var dst = ".json";
+                    if (type == "past_hour") {
+                        dst = "_hour" + dst;
+                    } else if (type == "past_day") {
+                        dst = "_day" + dst;
+                    } else if (type == "past_week") {
+                        dst = "_week" + dst;
+                    } else if (type == "past_month") {
+                        dst = "_month" + dst;
+                    } else if (type == "past_year") {
+                        dst = "_year" + dst;
+                    }
+
+                    if (minmag == "3.0") {
+                        dst = "3.0" + dst;
+                    } else if (minmag == "5.0") {
+                        dst = "5.0" + dst;
+                    } else {
+                        dst = "1.0" + dst;
+                    }
+                    
+                    var url = "https://earthquick.github.io/data/" + dst;
 
                     getAJAX(function(data){
                         var t = eval(data);
                         document.getElementById("tbody").innerHTML = JSON.stringify(t.features);
                     },url);
+                } else {
+
                 }
             } 
 
