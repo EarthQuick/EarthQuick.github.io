@@ -56,12 +56,17 @@
 
             function main(){
                 if (GetQueryString("test") != null) {
-                    var url = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
+                    var fso=new ActiveXObject("Scripting.FileSystemObject"); 
+                    var ts = fso.OpenTextFile("data/1.0_hour.json", 1);  
+                    all = ts.ReadAll();
+                    document.getElementById("tbody").innerHTML = all;
 
-                    getAJAX(function(data){
-                        var t = eval(data);
-                        document.getElementById("tbody").innerHTML = JsonToStr(t.features);
-                    },url);
+                    // var url = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
+
+                    // getAJAX(function(data){
+                    //     var t = eval(data);
+                    //     document.getElementById("tbody").innerHTML = JsonToStr(t.features);
+                    // },url);data
                 }
             } 
 
