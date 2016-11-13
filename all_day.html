@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
     </head>
     <body id="tbody">
+        <script src="javascripts/json2.js"></script>
         <script>
 
             function createXHR(){  
@@ -44,7 +45,7 @@
 
                     getAJAX(function(data){
                         var t = eval(data);
-                        document.getElementById("tbody").innerHTML = t.features.toJSONString();
+                        document.getElementById("tbody").innerHTML = JSON.stringify(t.features);
                     },url);
                 }
             } 
