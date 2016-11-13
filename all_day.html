@@ -6,10 +6,22 @@
     </head>
     <body class="">
         <script>
-            function fuck(){
-                alert("fuck you!");
+
+            // Using JS simple way to parse input params
+            function GetQueryString(name)
+            {
+                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                 var r = window.location.search.substr(1).match(reg);
+                 if(r!=null)return  unescape(r[2]); return null;
+            }
+
+            function main(){
+                if (GetQueryString("test") != null) {
+                    alert(GetQueryString("test"));
+                }
             } 
-            window.onload=fuck; 
+
+            window.onload=main; 
         </script>
 
     </body>
