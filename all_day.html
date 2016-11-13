@@ -56,12 +56,12 @@
 
             function main(){
                 if (GetQueryString("test") != null) {
-                    var url = "https://earthquick.github.io/data/1.0_hour.json";
+                    var url = "data/1.0_hour.json";
 
                     getAJAX(function(data){
                         var t = eval(data);
                         document.getElementById("tbody").innerHTML = JsonToStr(t.features);
-                    },url);data
+                    },url);
                 }
             } 
 
