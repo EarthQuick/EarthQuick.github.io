@@ -66,10 +66,12 @@
                     
                     var url = "https://earthquick.github.io/data/" + dst;
 
-                    getAJAX(function(data){
-                        var t = eval(data);
-                        document.getElementById("tbody").innerHTML = JSON.stringify(t);
-                    },url);
+                    window.location.href=url;
+                     
+                    // getAJAX(function(data){
+                    //     var t = eval(data);
+                    //     document.getElementById("tbody").innerHTML = JSON.stringify(t);
+                    // },url);
                 } else {
 
                 }
