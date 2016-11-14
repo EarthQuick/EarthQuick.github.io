@@ -52,10 +52,8 @@
                         dst = "_day" + dst;
                     } else if (type == "past_week") {
                         dst = "_week" + dst;
-                    } else if (type == "past_month") {
+                    } else {
                         dst = "_month" + dst;
-                    } else if (type == "past_year") {
-                        dst = "_year" + dst;
                     }
 
                     if (minmag == "3.0") {
@@ -70,7 +68,7 @@
 
                     getAJAX(function(data){
                         var t = eval(data);
-                        document.getElementById("tbody").innerHTML = JSON.stringify(t.features);
+                        document.getElementById("tbody").innerHTML = JSON.stringify(t);
                     },url);
                 } else {
 
