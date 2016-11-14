@@ -49,9 +49,30 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="8" column="151" selection-start-line="8" selection-start-column="151" selection-end-line="8" selection-end-column="151" />
-              <folding />
+            <state relative-caret-position="150">
+              <caret line="7" column="151" selection-start-line="7" selection-start-column="151" selection-end-line="7" selection-end-column="151" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#18215#18220#0" expanded="true" />
+                <element signature="e#18731#18736#0" expanded="true" />
+                <element signature="e#18791#18796#0" expanded="true" />
+                <element signature="e#19230#19235#0" expanded="true" />
+                <element signature="e#19240#19245#0" expanded="true" />
+                <element signature="e#19267#19272#0" expanded="true" />
+                <element signature="e#19278#19283#0" expanded="true" />
+                <element signature="e#19733#19739#0" expanded="true" />
+                <element signature="e#19764#19770#0" expanded="true" />
+                <element signature="e#19782#19788#0" expanded="true" />
+                <element signature="e#19814#19820#0" expanded="true" />
+                <element signature="e#19832#19838#0" expanded="true" />
+                <element signature="e#19864#19870#0" expanded="true" />
+                <element signature="e#19876#19882#0" expanded="true" />
+                <element signature="e#19907#19913#0" expanded="true" />
+                <element signature="e#19914#19920#0" expanded="true" />
+                <element signature="e#19954#19960#0" expanded="true" />
+                <element signature="e#19961#19967#0" expanded="true" />
+                <element signature="e#19993#19999#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,6 +125,7 @@
         <option value="$PROJECT_DIR$/api.html" />
         <option value="$PROJECT_DIR$/auto_commit.sh" />
         <option value="$PROJECT_DIR$/scripts/extractor.py" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -579,9 +601,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="8" column="151" selection-start-line="8" selection-start-column="151" selection-end-line="8" selection-end-column="151" />
-          <folding />
+        <state relative-caret-position="150">
+          <caret line="7" column="151" selection-start-line="7" selection-start-column="151" selection-end-line="7" selection-end-column="151" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#18215#18220#0" expanded="true" />
+            <element signature="e#18731#18736#0" expanded="true" />
+            <element signature="e#18791#18796#0" expanded="true" />
+            <element signature="e#19230#19235#0" expanded="true" />
+            <element signature="e#19240#19245#0" expanded="true" />
+            <element signature="e#19267#19272#0" expanded="true" />
+            <element signature="e#19278#19283#0" expanded="true" />
+            <element signature="e#19733#19739#0" expanded="true" />
+            <element signature="e#19764#19770#0" expanded="true" />
+            <element signature="e#19782#19788#0" expanded="true" />
+            <element signature="e#19814#19820#0" expanded="true" />
+            <element signature="e#19832#19838#0" expanded="true" />
+            <element signature="e#19864#19870#0" expanded="true" />
+            <element signature="e#19876#19882#0" expanded="true" />
+            <element signature="e#19907#19913#0" expanded="true" />
+            <element signature="e#19914#19920#0" expanded="true" />
+            <element signature="e#19954#19960#0" expanded="true" />
+            <element signature="e#19961#19967#0" expanded="true" />
+            <element signature="e#19993#19999#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
