@@ -1,3 +1,4 @@
+cd /Users/yhc/Documents/EarthQuick.github.io
 git add .
 git add ../data/
 git add ../
